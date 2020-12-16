@@ -17,7 +17,7 @@ variable "heartbeat_notifications" {
 variable "heartbeat_timeframe" {
   description = "Timeframe for heartbeat detector (i.e. \"10m\")"
   type        = string
-  default     = "5m"
+  default     = "20m"
 }
 
 variable "heartbeat_aggregation_function" {
@@ -43,7 +43,7 @@ variable "capacity_aggregation_function" {
 variable "capacity_transformation_function" {
   description = "Transformation function for capacity detector (i.e. \".mean(over='5m')\")"
   type        = string
-  default     = ".mean(over='5m')"
+  default     = ".min(over='5m')"
 }
 
 variable "capacity_disabled" {
@@ -93,7 +93,7 @@ variable "gateway_requests_duration_aggregation_function" {
 variable "gateway_requests_duration_transformation_function" {
   description = "Transformation function for gateway requests duration detector (i.e. \".mean(over='5m')\")"
   type        = string
-  default     = ".mean(over='5m')"
+  default     = ".min(over='5m')"
 }
 
 variable "gateway_requests_duration_disabled" {
@@ -143,7 +143,7 @@ variable "backend_requests_duration_aggregation_function" {
 variable "backend_requests_duration_transformation_function" {
   description = "Transformation function for backend requests duration detector (i.e. \".mean(over='5m')\")"
   type        = string
-  default     = ".mean(over='5m')"
+  default     = ".min(over='5m')"
 }
 
 variable "backend_requests_duration_disabled" {
