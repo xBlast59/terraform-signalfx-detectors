@@ -68,10 +68,10 @@ general usage of this repository.
 
 This module creates the following SignalFx detectors which could contain one or multiple alerting rules:
 
-* Azure Api Management Service Capacity
-* Azure Api Management Service Duration of backend request
-* Azure Api Management Service Duration of gateway request
-* Azure Api Management Service Heartbeat
+* Azure API Management Service Capacity
+* Azure API Management Service Duration of backend request
+* Azure API Management Service Duration of gateway request
+* Azure API Management Service Heartbeat
 
 ## How to collect required metrics?
 

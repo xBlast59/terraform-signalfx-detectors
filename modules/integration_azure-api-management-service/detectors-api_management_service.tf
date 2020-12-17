@@ -1,5 +1,5 @@
 resource "signalfx_detector" "heartbeat" {
-  name = format("%s %s", local.detector_name_prefix, "Azure Api Management Service Heartbeat")
+  name = format("%s %s", local.detector_name_prefix, "Azure API Management Service Heartbeat")
 
   program_text = <<-EOF
         from signalfx.detectors.not_reporting import not_reporting
@@ -20,7 +20,7 @@ resource "signalfx_detector" "heartbeat" {
 }
 
 resource "signalfx_detector" "capacity" {
-  name = format("%s %s", local.detector_name_prefix, "Azure Api Management Service Capacity")
+  name = format("%s %s", local.detector_name_prefix, "Azure API Management Service Capacity")
 
   program_text = <<-EOF
     base_filter = filter('resource_type', 'Microsoft.ApiManagement/service') and filter('primary_aggregation_type', 'true')
@@ -51,7 +51,7 @@ resource "signalfx_detector" "capacity" {
 }
 
 resource "signalfx_detector" "gateway_requests_duration" {
-  name = format("%s %s", local.detector_name_prefix, "Azure Api Management Service Duration of gateway request")
+  name = format("%s %s", local.detector_name_prefix, "Azure API Management Service Duration of gateway request")
 
   program_text = <<-EOF
     base_filter = filter('resource_type', 'Microsoft.ApiManagement/service') and filter('primary_aggregation_type', 'true')
@@ -82,7 +82,7 @@ resource "signalfx_detector" "gateway_requests_duration" {
 }
 
 resource "signalfx_detector" "backend_requests_duration" {
-  name = format("%s %s", local.detector_name_prefix, "Azure Api Management Service Duration of backend request")
+  name = format("%s %s", local.detector_name_prefix, "Azure API Management Service Duration of backend request")
 
   program_text = <<-EOF
     base_filter = filter('resource_type', 'Microsoft.ApiManagement/service') and filter('primary_aggregation_type', 'true')
