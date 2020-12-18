@@ -5,6 +5,18 @@ variable "environment" {
   type        = string
 }
 
+variable "runbook_url" {
+  description = "Runbook url to add in detectors messages"
+  type        = string
+  default     = ""
+}
+
+variable "tip" {
+  description = "Tip url to add in detectors messages"
+  type        = string
+  default     = ""
+}
+
 variable "notifications" {
   description = "Default notification recipients list per severity"
   type = object({

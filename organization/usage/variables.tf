@@ -1,11 +1,5 @@
 # Module specific
 
-variable "runbook_url" {
-  description = "Runbook url to add in detectors messages"
-  type        = string
-  default     = ""
-}
-
 variable "is_parent" {
   description = "Use \"child version\" of org metrics if true. Disable for child org."
   type        = bool
