@@ -14,6 +14,7 @@ EOF
     notifications         = coalescelist(lookup(var.velero_scheduled_backup_missing_notifications, "major", []), var.notifications.major)
     parameterized_subject = local.rule_subject
     parameterized_body    = local.rule_body
+    runbook_url           = var.runbook_url
   }
 }
 
@@ -33,6 +34,7 @@ EOF
     notifications         = coalescelist(lookup(var.velero_backup_failure_notifications, "major", []), var.notifications.major)
     parameterized_subject = local.rule_subject
     parameterized_body    = local.rule_body
+    runbook_url           = var.runbook_url
   }
 }
 
@@ -52,6 +54,7 @@ EOF
     notifications         = coalescelist(lookup(var.velero_backup_partial_failure_notifications, "major", []), var.notifications.major)
     parameterized_subject = local.rule_subject
     parameterized_body    = local.rule_body
+    runbook_url           = var.runbook_url
   }
 }
 
@@ -71,6 +74,7 @@ EOF
     notifications         = coalescelist(lookup(var.velero_backup_deletion_failure_notifications, "major", []), var.notifications.major)
     parameterized_subject = local.rule_subject
     parameterized_body    = local.rule_body
+    runbook_url           = var.runbook_url
   }
 }
 
@@ -90,6 +94,7 @@ EOF
     notifications         = coalescelist(lookup(var.velero_volume_snapshot_failure_notifications, "major", []), var.notifications.major)
     parameterized_subject = local.rule_subject
     parameterized_body    = local.rule_body
+    runbook_url           = var.runbook_url
   }
 }
 

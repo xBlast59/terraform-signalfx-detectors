@@ -15,6 +15,7 @@ EOF
     notifications         = coalescelist(lookup(var.heartbeat_notifications, "critical", []), var.notifications.critical)
     parameterized_subject = local.rule_subject_novalue
     parameterized_body    = local.rule_body
+    runbook_url           = var.runbook_url
   }
 }
 
@@ -35,6 +36,7 @@ EOF
     notifications         = coalescelist(lookup(var.node_ready_notifications, "major", []), var.notifications.major)
     parameterized_subject = local.rule_subject
     parameterized_body    = local.rule_body
+    runbook_url           = var.runbook_url
   }
 
   rule {
@@ -45,6 +47,7 @@ EOF
     notifications         = coalescelist(lookup(var.node_ready_notifications, "minor", []), var.notifications.minor)
     parameterized_subject = local.rule_subject
     parameterized_body    = local.rule_body
+    runbook_url           = var.runbook_url
   }
 }
 
@@ -64,6 +67,7 @@ EOF
     notifications         = coalescelist(lookup(var.pod_phase_status_notifications, "major", []), var.notifications.major)
     parameterized_subject = local.rule_subject
     parameterized_body    = local.rule_body
+    runbook_url           = var.runbook_url
   }
 }
 
@@ -83,6 +87,7 @@ EOF
     notifications         = coalescelist(lookup(var.terminated_notifications, "major", []), var.notifications.major)
     parameterized_subject = local.rule_subject
     parameterized_body    = local.rule_body
+    runbook_url           = var.runbook_url
   }
 }
 
@@ -102,6 +107,7 @@ EOF
     notifications         = coalescelist(lookup(var.oom_killed_notifications, "major", []), var.notifications.major)
     parameterized_subject = local.rule_subject
     parameterized_body    = local.rule_body
+    runbook_url           = var.runbook_url
   }
 }
 
@@ -121,6 +127,7 @@ EOF
     notifications         = coalescelist(lookup(var.deployment_crashloopbackoff_notifications, "major", []), var.notifications.major)
     parameterized_subject = local.rule_subject
     parameterized_body    = local.rule_body
+    runbook_url           = var.runbook_url
   }
 }
 
@@ -140,6 +147,7 @@ EOF
     notifications         = coalescelist(lookup(var.daemonset_crashloopbackoff_notifications, "major", []), var.notifications.major)
     parameterized_subject = local.rule_subject
     parameterized_body    = local.rule_body
+    runbook_url           = var.runbook_url
   }
 }
 
@@ -162,6 +170,7 @@ EOF
     notifications         = coalescelist(lookup(var.job_failed_notifications, "major", []), var.notifications.major)
     parameterized_subject = local.rule_subject
     parameterized_body    = local.rule_body
+    runbook_url           = var.runbook_url
   }
 }
 
@@ -183,6 +192,7 @@ EOF
     notifications         = coalescelist(lookup(var.daemonset_scheduled_notifications, "critical", []), var.notifications.critical)
     parameterized_subject = local.rule_subject
     parameterized_body    = local.rule_body
+    runbook_url           = var.runbook_url
   }
 }
 
@@ -204,6 +214,7 @@ EOF
     notifications         = coalescelist(lookup(var.daemonset_ready_notifications, "critical", []), var.notifications.critical)
     parameterized_subject = local.rule_subject
     parameterized_body    = local.rule_body
+    runbook_url           = var.runbook_url
   }
 }
 
@@ -223,6 +234,7 @@ EOF
     notifications         = coalescelist(lookup(var.daemonset_misscheduled_notifications, "critical", []), var.notifications.critical)
     parameterized_subject = local.rule_subject
     parameterized_body    = local.rule_body
+    runbook_url           = var.runbook_url
   }
 }
 
@@ -244,6 +256,7 @@ EOF
     notifications         = coalescelist(lookup(var.deployment_available_notifications, "critical", []), var.notifications.critical)
     parameterized_subject = local.rule_subject
     parameterized_body    = local.rule_body
+    runbook_url           = var.runbook_url
   }
 }
 
@@ -265,6 +278,7 @@ EOF
     notifications         = coalescelist(lookup(var.replicaset_available_notifications, "critical", []), var.notifications.critical)
     parameterized_subject = local.rule_subject
     parameterized_body    = local.rule_body
+    runbook_url           = var.runbook_url
   }
 }
 
@@ -286,6 +300,7 @@ EOF
     notifications         = coalescelist(lookup(var.replication_controller_available_notifications, "critical", []), var.notifications.critical)
     parameterized_subject = local.rule_subject
     parameterized_body    = local.rule_body
+    runbook_url           = var.runbook_url
   }
 }
 
@@ -307,6 +322,7 @@ EOF
     notifications         = coalescelist(lookup(var.satefulset_ready_notifications, "critical", []), var.notifications.critical)
     parameterized_subject = local.rule_subject
     parameterized_body    = local.rule_body
+    runbook_url           = var.runbook_url
   }
 }
 

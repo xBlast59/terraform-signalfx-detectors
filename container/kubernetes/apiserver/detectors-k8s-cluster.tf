@@ -15,6 +15,7 @@ EOF
     notifications         = coalescelist(lookup(var.heartbeat_notifications, "critical", []), var.notifications.critical)
     parameterized_subject = local.rule_subject_novalue
     parameterized_body    = local.rule_body
+    runbook_url           = var.runbook_url
   }
 }
 

@@ -17,6 +17,7 @@ EOF
     notifications         = coalescelist(lookup(var.ingress_5xx_notifications, "critical", []), var.notifications.critical)
     parameterized_subject = local.rule_subject
     parameterized_body    = local.rule_body
+    runbook_url           = var.runbook_url
   }
 
   rule {
@@ -27,6 +28,7 @@ EOF
     notifications         = coalescelist(lookup(var.ingress_5xx_notifications, "major", []), var.notifications.major)
     parameterized_subject = local.rule_subject
     parameterized_body    = local.rule_body
+    runbook_url           = var.runbook_url
   }
 }
 
@@ -49,6 +51,7 @@ EOF
     notifications         = coalescelist(lookup(var.ingress_4xx_notifications, "critical", []), var.notifications.critical)
     parameterized_subject = local.rule_subject
     parameterized_body    = local.rule_body
+    runbook_url           = var.runbook_url
   }
 
   rule {
@@ -59,6 +62,7 @@ EOF
     notifications         = coalescelist(lookup(var.ingress_4xx_notifications, "major", []), var.notifications.major)
     parameterized_subject = local.rule_subject
     parameterized_body    = local.rule_body
+    runbook_url           = var.runbook_url
   }
 }
 
@@ -79,6 +83,7 @@ EOF
     notifications         = coalescelist(lookup(var.ingress_latency_notifications, "critical", []), var.notifications.critical)
     parameterized_subject = local.rule_subject
     parameterized_body    = local.rule_body
+    runbook_url           = var.runbook_urlv
   }
 
   rule {
@@ -89,6 +94,7 @@ EOF
     notifications         = coalescelist(lookup(var.ingress_latency_notifications, "major", []), var.notifications.major)
     parameterized_subject = local.rule_subject
     parameterized_body    = local.rule_body
+    runbook_url           = var.runbook_url
   }
 }
 
